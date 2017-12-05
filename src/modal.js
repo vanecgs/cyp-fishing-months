@@ -70,7 +70,8 @@ class Modal extends React.Component {
             left: 0,
             right: 0,
             backgroundColor: 'rgba(0,0,0,0.3)',
-            padding: 20
+            padding: 20,
+            overflow: 'scroll'
         };
 
         // The modal "window"
@@ -84,12 +85,9 @@ class Modal extends React.Component {
         return (
             <div className="backdrop" style={backdropStyle}>
                 <div className="card" style={modalStyle}>
-                    <img className="card-img-top" src="..." alt={this.props.fishInfo.name} />
+                    <img className="card-img-top" src={this.props.fishInfo.image} alt={this.props.fishInfo.name} />
                     <div className="card-body">
                         <h4 className="card-title">{this.props.fishInfo.name}</h4>
-                        <p className="card-text">
-
-                        </p>
                     </div>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item">Modalidad de Pesca: {this.fishingModes(this.props.fishInfo.mode)}</li>
