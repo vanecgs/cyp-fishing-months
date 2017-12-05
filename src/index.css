@@ -1,0 +1,35 @@
+.seasons {
+    padding: 20px;
+}
+
+.seasons > ul > li span {
+    cursor: pointer;
+}
+
+.seasons > ul > li > ul,
+.seasons > ul > li > ul > li > div > ul {
+    display: none;
+}
+
+.seasons > ul > li.active > ul {
+    background: white;
+    color: black;
+    display: block;
+    margin: 10px -20px -10px -20px;
+    padding: 10px 20px 10px 40px;
+}
+
+.seasons > ul > li.active > ul > li.active > div > ul {
+    display: block;
+    padding: 10px 10px 20px 20px;
+}
+
+.seasons > ul > li.active > ul > li.active > div > ul > li {
+    cursor: pointer;
+}
+
+.info {
+    border-top: 1px solid rgba(0,0,0,.125);
+    font-size: 12px;
+    padding: 10px;
+}
