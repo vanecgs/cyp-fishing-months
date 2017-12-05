@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from './modal';
+import Ads from './ads';
 import './index.css';
 
 const DATA = [
@@ -8,26 +9,26 @@ const DATA = [
         id : 1,
         season : 'Primavera',
         fresh : [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 18, 19],
-        salt : [20, 21, 1, 22, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 13, 15, 36, 37, 38, 40, 41, 42, 44, 45, 46]
+        salt : [20, 21, 22, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 40, 41, 42, 44, 45, 46, 47, 48, 50]
     },
     {
         id : 2,
         season : 'Verano',
         fresh : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19],
-        salt : [20, 21, 1, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 7, 34, 35, 13, 36, 37, 38, 39, 41, 43, 44, 45, 46]
+        salt : [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 43, 44, 45, 46, 47, 48, 49]
 
     },
     {
         id : 3,
         season : 'Otoño',
         fresh : [1, 3, 5, 9, 10, 13, 14, 15, 18, 19],
-        salt : [21, 1, 23, 24, 25, 28, 30, 33, 34, 15, 38, 39, 40, 42, 44, 45, 46]
+        salt : [21, 23, 24, 25, 28, 30, 33, 34, 38, 39, 40, 42, 44, 45, 46, 48, 50]
     },
     {
         id : 4,
         season : 'Invierno',
         fresh : [1, 15],
-        salt : [25, 28, 34, 15, 38, 42, 45]
+        salt : [25, 28, 34, 38, 42, 45, 50]
     }
 ];
 
@@ -43,7 +44,7 @@ const FISHDATA = [
         name : 'Bagre',
         mode : [1],
         size : 20,
-        bait : [2, 6, 10, 15, 13, 19, 9, 24, 20, 25, 7, 12],
+        bait : [13, 19, 9, 10, 24, 19, 25, 7, 12],
         image : 'http://www.caminosypiedras.com/wp-content/uploads/2017/10/DSC_0103.jpg'
     },
     {
@@ -79,13 +80,13 @@ const FISHDATA = [
         mode : [0, 1, 2],
         size : 60,
         bait : [14, 19, 10, 23, 20, 5, 1, 3],
-        image : 'https://cdn.pixabay.com/photo/2016/07/15/22/17/fishery-1520590_960_720.jpg'
+        image : 'http://www.pousadahambare.com.br/images/pescadourado3.jpg'
     },
     {
         name : 'Lisa',
         mode : [0],
         size : 0,
-        bait : [13],
+        bait : [13, 9],
         image : 'https://img1.exportersindia.com/product_images/bc-full/dir_41/1208013/grey-mullet-411762.jpg'
     },
     {
@@ -127,7 +128,7 @@ const FISHDATA = [
         name : 'Palometa',
         mode : [0, 1, 2],
         size : 0,
-        bait : [2, 7, 10, 15, 13, 19, 10, 23, 24, 20, 25, 5, 1, 7, 12, 22, 3],
+        bait : [13, 19, 9, 10, 23, 24, 20, 25, 5, 1, 7, 12, 22, 3],
         image : 'http://www.caminosypiedras.com/wp-content/uploads/2016/05/DSC_9002.jpg'
     },
     {
@@ -141,7 +142,7 @@ const FISHDATA = [
         name : 'Pejerrey',
         mode : [0, 1, 2],
         size : 25,
-        bait : [0, 21, 7, 10, 15, 13, 19, 10, 7, 12],
+        bait : [13, 19, 10, 7, 12],
         image : 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Odontesthes_argentinensis_Punta_Rasa.JPG'
     },
     {
@@ -156,7 +157,7 @@ const FISHDATA = [
         mode : [1],
         size : 0,
         bait : [13, 19, 10, 23, 20, 1, 3],
-        image : 'https://www.vistaalmar.es/images/ampliadas371/raya-rio-Potamotrygon-motoro.jpg'
+        image : 'http://www.elasmodiver.com/Sharkive%20images/MotoroStingray004.jpg'
     },
     {
         name : 'Surubi',
@@ -234,7 +235,7 @@ const FISHDATA = [
         mode : [1],
         size : 0,
         bait : [0, 2, 21, 7, 8, 6, 10, 14, 15],
-        image : 'https://cdn.pixabay.com/photo/2016/10/15/17/08/skate-1742937_960_720.jpg'
+        image : 'http://3.bp.blogspot.com/-GEj2QPyzXqs/UL-d9pRNFoI/AAAAAAAAZ8o/MmZ90U9SUi4/s1600/008.JPG'
     },
     {
         name : 'Congrio',
@@ -332,7 +333,7 @@ const FISHDATA = [
         mode : [1, 2],
         size : 0,
         bait : [4, 21, 10, 15],
-        image : 'https://cdn.pixabay.com/photo/2014/12/05/16/41/fishing-558232_960_720.jpg'
+        image : 'http://www.sibmagallanes.cl/archivos/ecosistemas-acuaticos/fauna/peces/eleginops-maclovinus-cuvier-1830/portada.jpg'
     },
     {
         name : 'Salmón',
@@ -360,7 +361,35 @@ const FISHDATA = [
         mode : [0, 1, 2],
         size : 80,
         bait : [2, 4, 21, 6, 10, 15],
-        image : 'https://www.vistaalmar.es/images/ampliadas/tiburon-limon.jpg'
+        image : 'http://www.federpesca.com/wp-content/uploads/sites/4/2015/03/Pesca_Tiburon2.jpg'
+    },
+    {
+        name : 'Palometa de mar',
+        mode : [0, 1, 2],
+        size : 0,
+        bait : [2, 7, 10, 15],
+        image : 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Palometa.jpg'
+    },
+    {
+        name : 'Bagre de mar',
+        mode : [1],
+        size : 0,
+        bait : [2, 6, 10, 15],
+        image : 'https://1.bp.blogspot.com/-k0b6QG3hPj4/VEaYiEHOzrI/AAAAAAAARRw/vxPQhWlf7jI/s1600/100_6442.JPG'
+    },
+    {
+        name : 'Lisa de mar',
+        mode : [0],
+        size : 0,
+        bait : [14],
+        image : 'https://img1.exportersindia.com/product_images/bc-full/dir_41/1208013/grey-mullet-411762.jpg'
+    },
+    {//50
+        name : 'Pejerrey de mar',
+        mode : [0, 1, 2],
+        size : 25,
+        bait : [0, 21, 7, 10, 15],
+        image : 'https://upload.wikimedia.org/wikipedia/commons/b/b4/Odontesthes_argentinensis_Punta_Rasa.JPG'
     }
 ];
 
@@ -486,7 +515,7 @@ class FishingList extends React.Component {
                     <p className="text-center">¡Bienvenidos! Esta es una lista de las distintas especies que puedes pescar separadas por época del año. Haciendo click en cada uno de los peces encontrarás información adicional como: <strong>modalidad de pesca, medida reglamentaria y carnada</strong>.</p>
                     <Seasons />
                 </div>
-                <div className="advertising"></div>
+                <Ads />
                 <div className="info">
                     <p>Copyright &copy; 2017 - <a href="http://www.caminosypiedras.com/" target="_blank" rel="noopener noreferrer">Caminos y Piedras</a></p>
                 </div>
