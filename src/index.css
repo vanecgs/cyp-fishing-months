@@ -1,3 +1,12 @@
+.bg-primary {
+    background-color: #455a64!important;
+}
+
+.list-group-item.active {
+    background-color: #455a64;
+    border-color: #455a64;
+}
+
 .seasons {
     padding: 20px;
 }
@@ -32,4 +41,8 @@
     border-top: 1px solid rgba(0,0,0,.125);
     font-size: 12px;
     padding: 10px;
+}
+
+.advertising {
+    margin: 0 0 20px;
 }

@@ -9,26 +9,26 @@ const DATA = [
         id : 1,
         season : 'Primavera',
         fresh : [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 18, 19],
-        salt : [20, 21, 22, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 40, 41, 42, 44, 45, 46, 47, 48, 50]
+        salt : [20, 21, 22, 48, 24, 25, 27, 28, 29, 30, 31, 32, 33, 34, 47, 50, 36, 37, 38, 40, 41, 42, 44, 45, 46]
     },
     {
         id : 2,
         season : 'Verano',
         fresh : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19],
-        salt : [20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 43, 44, 45, 46, 47, 48, 49]
+        salt : [20, 21, 22, 48, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 49, 34, 35, 47, 36, 37, 38, 39, 41, 43, 44, 45, 46]
 
     },
     {
         id : 3,
         season : 'Otoño',
         fresh : [1, 3, 5, 9, 10, 13, 14, 15, 18, 19],
-        salt : [21, 23, 24, 25, 28, 30, 33, 34, 38, 39, 40, 42, 44, 45, 46, 48, 50]
+        salt : [21, 48, 23, 24, 25, 28, 30, 33, 34, 50, 38, 39, 40, 42, 44, 45, 46]
     },
     {
         id : 4,
         season : 'Invierno',
         fresh : [1, 15],
-        salt : [25, 28, 34, 38, 42, 45, 50]
+        salt : [25, 28, 34, 50, 38, 42, 45]
     }
 ];
 
@@ -79,7 +79,7 @@ const FISHDATA = [
         name : 'Dorado',
         mode : [0, 1, 2],
         size : 60,
-        bait : [14, 19, 10, 23, 20, 5, 1, 3],
+        bait : [13, 19, 10, 23, 20, 5, 1, 3],
         image : 'http://www.pousadahambare.com.br/images/pescadourado3.jpg'
     },
     {
@@ -398,7 +398,7 @@ class Header extends React.Component {
         return (
             <nav className="navbar navbar-dark bg-primary">
                 <span className="navbar-text">
-                    Épocas de Pesca
+                    CYP - Épocas de Pesca
                 </span>
                 <ul className="navbar-nav">
                     <li className="nav-item">
